@@ -1,0 +1,771 @@
+
+/* ===== CORES E FONTES - IDENTIDADE ROSE BLOOM ===== */
+:root {
+  --rosa-quartzo: #F7CAC9;
+  --verde-salvia: #92A8A0;
+  --pessego: #FFBE98;
+  --bege-fundo: #FFF9F5;
+  --texto: #3A4F47;
+  --bege-card: #E8E2D9; /* MARROM PUXADO - bege escuro */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFFFF;
+  color: var(--texto);
+}
+
+h1, h2, h3, .logo {
+  font-family: 'Playfair Display', serif;
+}
+
+/* ===== GRID PRINCIPAL DO SITE ===== */
+.site-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* ===== HEADER COM LOGO CENTRALIZADA ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 10% 1rem;
+  background-color: #FFFFFF;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+.logo {
+  font-size: 2rem;
+  color: var(--texto);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  margin-right: auto;
+  padding-right: 2rem;
+}
+
+.logo span {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  position: absolute;
+  top: 2.2rem;
+  left: 50%;
+  transform: translateX(-55%);
+  width: max-content;
+  text-align: center;
+}
+
+.logo-icone {
+  width: 28px;
+  height: 28px;
+  margin-top: 0.3rem;
+}
+
+.nav {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 0.5rem;
+  margin-left: auto;
+}
+
+/* ===== ANIMAÇÃO DO MENU - LINHA LARANJA ===== */
+.nav a {
+  color: var(--texto);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.95rem;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--pessego);
+  transition: width 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--pessego);
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.nav a.ativo {
+  color: var(--pessego);
+}
+
+.nav a.ativo::after {
+  width: 100%;
+}
+
+/* ===== HERO - TEXTO CENTRAL IGUAL À FOTO ===== */
+.hero {
+  padding: 4rem 10% 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: var(--texto);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.destaque-laranja {
+  color: var(--pessego);
+}
+
+.hero p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--texto);
+  max-width: 400px;
+}
+
+/* ===== DESTAQUES - QUADRADINHOS MARROM ===== */
+.destaques-home {
+  padding: 2rem 10% 5rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.destaques-home h2 {
+  font-size: 1.8rem;
+  color: var(--texto);
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.grid-destaques-home {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+.card-destaque-home {
+  text-align: center;
+}
+
+.card-imagem {
+  background: var(--bege-card);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.card-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-destaque-home h3 {
+  font-size: 1.1rem;
+  color: var(--texto);
+  margin-bottom: 0.3rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.link-vermais {
+  color: var(--pessego);
+  text-decoration: underline;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.link-vermais:hover {
+  color: var(--verde-salvia);
+}
+
+/* ===== PÁGINA SOBRE NÓS ===== */
+.sobre-nos {
+  padding: 4rem 10% 6rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sobre-nos h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  color: var(--texto);
+  margin-bottom: 4rem;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+}
+
+.sobre-bloco {
+  margin-bottom: 3rem;
+}
+
+.sobre-bloco h2 {
+  font-size: 1.3rem;
+  color: var(--texto);
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.sobre-bloco p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--texto);
+}
+
+/* ===== FOOTER VERDE IGUAL À FOTO ===== */
+.footer {
+  background-color: var(--verde-salvia);
+  color: #FFFFFF;
+  margin-top: 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 10%;
+}
+
+.footer-col h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-col span {
+  display: block;
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.footer-col p, .footer-col a {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.footer-col a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 1000px) {
+  .grid-destaques-home {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .nav {
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .logo {
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .logo span {
+    transform: translateX(-50%);
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero {
+    text-align: center;
+  }
+  .hero p {
+    margin: 0 auto;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sobre-nos h1 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+  }
+  .sobre-nos {
+    padding: 3rem 10% 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-destaques-home {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-imagem {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+/* ===== PÁGINA BUQUÊS ===== */
+.pagina-buques {
+  padding: 3rem 10% 6rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pagina-buques h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: var(--texto);
+  margin-bottom: 4rem;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+}
+
+.grid-buques {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem 2rem;
+}
+
+.card-buque {
+  text-align: left;
+}
+
+.card-buque-img {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--bege-card);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.card-buque-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-buque h3 {
+  font-size: 0.95rem;
+  color: var(--texto);
+  margin-bottom: 0.3rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.card-buque .descricao {
+  font-size: 0.85rem;
+  color: var(--texto);
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  min-height: 2.5rem;
+}
+
+.card-buque .preco {
+  font-size: 0.9rem;
+  color: var(--pessego);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* BOTÃO LARANJINHA VER MAIS */
+.btn-vermais {
+  display: inline-block;
+  background-color: var(--pessego);
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0.6rem 1.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-vermais:hover {
+  background-color: #ff9f6e;
+}
+
+/* ===== RESPONSIVO BUQUÊS ===== */
+@media (max-width: 1200px) {
+  .grid-buques {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-buques {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 1.5rem;
+  }
+  .pagina-buques h1 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-buques {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== PÁGINA DE PRODUTO ===== */
+.pagina-produto {
+  padding: 4rem 10% 6rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.produto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.produto-imagem {
+  background: var(--bege-card);
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.produto-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.produto-info h1 {
+  font-size: 2.5rem;
+  color: var(--texto);
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.produto-preco {
+  font-size: 2rem;
+  color: var(--pessego);
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.produto-descricao {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--texto);
+  margin-bottom: 2.5rem;
+}
+
+.produto-detalhes {
+  margin-bottom: 2.5rem;
+}
+
+.produto-detalhes h3 {
+  font-size: 1.1rem;
+  color: var(--texto);
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.produto-detalhes ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.produto-detalhes li {
+  font-size: 0.95rem;
+  color: var(--texto);
+  margin-bottom: 0.6rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.produto-detalhes li::before {
+  content: '•';
+  color: var(--pessego);
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+}
+
+.btn-comprar {
+  background-color: var(--pessego);
+  color: #FFFFFF;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1.5rem;
+  display: block;
+  width: 100%;
+}
+
+.btn-comprar:hover {
+  background-color: #ff9f6e;
+}
+
+.link-voltar {
+  color: var(--texto);
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.link-voltar:hover {
+  color: var(--pessego);
+}
+
+/* ===== RESPONSIVO PRODUTO ===== */
+@media (max-width: 968px) {
+  .produto-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .produto-info h1 {
+    font-size: 2rem;
+  }
+  .produto-preco {
+    font-size: 1.7rem;
+  }
+}
+
+/* ===== PÁGINA DE PRODUTOS - BUQUÊS E PRESENTES ===== */
+.conteudo-produtos {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 40px;
+}
+
+.titulo-secao {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+    color: #3A4F47;
+    line-height: 1.2;
+    margin-bottom: 50px;
+}
+
+.titulo-secao .destaque {
+    color: #E8A87C;
+    font-weight: 700;
+}
+
+/* Grid dos cards */
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* Card individual */
+.card-produto {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card-produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.card-produto img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.card-conteudo {
+    padding: 20px;
+}
+
+.card-conteudo h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #3A4F47;
+    margin: 0 0 8px 0;
+}
+
+.card-conteudo .descricao {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #6B7B73;
+    line-height: 1.4;
+    margin: 0 0 12px 0;
+    min-height: 36px;
+}
+
+.card-conteudo .preco {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #E8A87C;
+    margin: 0 0 16px 0;
+}
+
+.btn-ver-mais {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background: #3A4F47;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn-ver-mais:hover {
+    background: #2C3D36;
+}
+
+/* Rodapé verde */
+.rodape {
+    background: #A4B5A6;
+    color: #3A4F47;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 60px 40px;
+    margin-top: 80px;
+}
+
+.rodape-coluna h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin: 0 0 5px 0;
+}
+
+.rodape-coluna h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}
+
+.rodape-coluna .subtitulo-rodape {
+    font-size: 13px;
+    margin: 0 0 15px 0;
+}
+
+.rodape-coluna p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.rodape-coluna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rodape-coluna ul li {
+    margin-bottom: 10px;
+}
+
+.rodape-coluna ul li a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #3A4F47;
+    text-decoration: none;
+}
+
+.rodape-coluna ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Menu ativo laranja */
+.menu ul li a.ativo {
+    color: #E8A87C;
+    font-weight: 500;
+}
+
+/* Responsivo pra celular */
+@media (max-width: 1024px) {
+    .grid-produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .rodape {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-produtos {
+        grid-template-columns: 1fr;
+    }
+    .rodape {
+        grid-template-columns: 1fr;
+    }
+    .conteudo-produtos {
+        padding: 0 20px;
+    }
+    .titulo-secao {
+        font-size: 32px;
+    }
+}
+
+
+
